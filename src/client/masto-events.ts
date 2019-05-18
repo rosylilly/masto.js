@@ -33,6 +33,10 @@ export type EventTypes = keyof EventTypesMap;
 export class MastoEvents extends EventEmitter {
   private ws?: WebSocket;
 
+  constructor() {
+    super();
+  }
+
   /**
    * Connect to the websocket endpoint
    * @param url URL of the websocket endpoint
